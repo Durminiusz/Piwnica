@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*BODY*/
+body{
+
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+/*Karta*/
+
+.karta{
+
+    width: 15%;
+    height: 55%;
+    background-color: green;
+    display: flex;
+
+
+    justify-content: center;
+    align-items: center;
+    
+    background-size: cover;
+    background-position: center;
+    background-image: url("natura.png");
+
+    animation: obrot 4.5s;
+    
+    border-radius: 0px 50px 0px 50px;
+    
+}
+.szklo{
+
+    width: 90%;
+    height: 95%;
+    opacity: 0.3;
+    background-color: white;
+    border-radius: 0px 50px 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.karta:hover .orange{
+
+    transform: translateY(-100%);
+
+    animation: wjazd 4s;
+
+
+}
+
+.karta2{
+
+    width: 15%;
+    height: 55%;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-size: cover;
+  
+    background-position: center;
+  
+    background-image: url("miasto.jpg");
+
+    animation: obrot 4.3s;
+
+    border-radius: 0px 50px 0px 50px;
+    
+}
+.karta3{
+
+    width: 15%;
+    height: 55%;
+    background-color: blue;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+   
+    background-size: cover;
+   
+    background-position: center;
+  
+    background-image: url("inf.jpg");
+
+    animation: obrot 4s;
+    
+    border-radius: 0px 50px 0px 50px;
+
+}
+
+.karta:hover{
+    
+    box-shadow:  10px 10px 10px 0.5px yellow;
+  
+    transform: scale(1.1);
+
+    transition: 0.3s transform ease-in-out;
+}
+.karta2:hover{
+    
+   
+
+    box-shadow:  10px 10px 10px 0.5px yellow;
+  
+    transform: scale(1.1);
+
+    transition: 0.3s transform ease-in-out;
+
+}
+.karta3:hover{
+    
+    box-shadow:  10px 10px 10px 0.5px yellow;
+  
+    transform: scale(1.1);
+
+    transition: 0.3s transform ease-in-out;
+
+
+}
+
+
+.wysmenu{
+
+ 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.orange{
+    background-color: orange;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transform: translateY(0%);
+   
+}
+
+@keyframes obrot{
+
+        0% {
+
+            transform: translateX(-700%);
+
+        }
+        15%{
+           
+            transform: rotate(-45deg);
+        }
+
+        35%{
+
+            transform: rotate(25deg);
+
+        }
+        75%{
+
+            transform: rotate(0deg);
+
+        }
+
+        100% {
+            
+            transform: translateX(0%);
+
+        }
+}
+
+@keyframes wjazd {
+
+
+    0%{
+
+        transform: translateY(0%);
+    }
+    
+    100%{
+
+        transform: translateY(-100%);
+
+    }
+    
+}
+
+@keyframes wyjazd{
+
+
+    0%{
+
+        transform: translateX(0%);
+    }
+    
+    100%{
+
+        transform: translateX(100%);
+
+    }
+
+
+
+}
