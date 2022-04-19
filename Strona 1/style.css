@@ -1,0 +1,395 @@
+:root {
+
+    --grey: grey;
+    --green: green;
+    --dark: black;
+    --white: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*BODY*/
+body{
+
+    margin-top: 200px;
+    width: 99.2vw;
+    height: 99.2vh;
+    background: var(--dark);
+    display: flex;
+    justify-content:left;
+    flex-wrap: wrap;
+    flex-direction: row;
+    overflow-x: hidden;
+}
+/*NAGŁÓWEK*/
+.header{
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20.6%;
+    top: 0;
+    position: absolute;
+    background: var(--dark);
+    border-bottom: solid red;
+}
+
+#imie{
+
+    width: 50%;
+    height: 100%;
+    border: solid black;
+    background: var(--dark);
+    text-align: center;
+    color: white;
+    padding-top: 2%;
+    
+}
+
+#godz{
+    
+    width: 50%;
+    height: 100%;
+    border: solid black;
+    background: var(--dark);
+    text-align: center;
+    color: white;
+   
+
+}
+#clock{
+
+    font-family: 'Concert One', cursive;
+    font-size: 11vh;
+
+}
+
+/*LEWY ELEMENT*/
+.Menu{
+
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    left: 0;
+    flex-wrap: wrap;
+
+}
+
+.wysmenu{
+
+    background: var(--dark);
+    top: 0;
+    width: 100%;
+    height: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    transform: translateX(-100%);
+    transition: 0.3s transform ease-in-out;
+}
+
+
+.menutriger{
+
+    top:0;
+    width: 100%;
+    height: 5%;
+    
+    border-right: solid red;
+    border-bottom: solid red;
+    transform: translateX(-0%);
+    background: var(--dark);
+    color: white;
+}
+
+.menutriger:focus ~ .wysmenu, .wysmenu:hover{
+
+    transform: translateX(0%);
+    
+} 
+
+button{
+    
+    border: none;
+}
+.an:hover{
+
+    animation: pokaz 3s;
+
+    animation-iteration-count: infinite;
+
+}
+
+
+#box{
+   
+    position: relative;
+    font-size: 7.1vh;
+    text-align: center;
+    width: 300px;
+    height: 220px;
+    background: var(--dark);
+    border-top: solid red;
+    border-bottom: solid red;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#box:hover #blysk{
+
+
+    transform: translateX(1100%) rotate(20deg);
+
+}
+
+#blysk{
+  
+    transform: translateX(-380%) rotate(20deg);
+    width: 40px;
+    height: 300px;
+    background-color: white;
+    opacity: 0.5;
+    transition: 0.4s transform ease-in-out;
+
+}
+
+#center{
+
+
+    transform: translateX(-10%);
+
+}
+#center2{
+
+    transform: translateX(-15%);
+}
+
+#wolf{
+
+    width: 45%;
+    height: 76%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*PRAWY ELEMENT*/
+.szklo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    background: gray;
+    background: linear-gradient(to left top, var(--grey),var(--dark));
+}
+.plytka{
+
+    width: 65%;
+    height: 90%;
+    border-radius: 20px;
+    background: white;
+    background: linear-gradient(to right top, rgba(0,0,0, 0.1),rgba(0,0,0,0.75));
+    backdrop-filter: blur(8px);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2vh;
+
+}
+#src{
+    margin-left: 200px;
+    top:15%;
+    position: absolute;
+}
+#back-img{
+
+    right: 29%;
+    top: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    
+}
+
+.stopka{
+
+
+    border-top: solid red;
+    background: var(--dark);
+    width: 100%;
+    height: 10%;
+    color: white;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+    
+}
+
+@keyframes pokaz {
+
+
+    from{
+
+        box-shadow: 0 0 30px white;
+
+    }
+    50%{
+
+        box-shadow: 0 0 50px white;
+
+    }
+    75%{
+
+        box-shadow: 0 0 70px white;
+
+    }
+    100%{
+
+        box-shadow: 0 0 30px white;
+
+    }
+  
+
+}
+
+
+  @media screen and (min-width: 50%) {
+  
+
+    #box{
+   
+    font-size: 7.1vh;
+    text-align: center;
+    width: 300px;
+    height: 220px;
+    background: var(--dark);
+    border-top: solid blue;
+    border-bottom: solid red;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    }
+   }
+  
+  
+  @media screen and (max-width: 750px) {
+    
+    #box{
+   
+        font-size: 7.1vh;
+        text-align: center;
+        width: 100px;
+        height: 220px;
+        background: var(--dark);
+        border-top: solid blue;
+        border-bottom: solid blue;
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        }
+  }
+
+
+
+
+
+
+
+
+
+
+/*CSS DO PODSTRON ZADANIA*/
+.header_zadania{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 18%;
+        top: 0;
+        position: absolute;
+        background: var(--dark);
+        border-bottom: solid red;
+        font-size: 7vh;
+}
+h1{
+
+    color: white;
+}
+.Menu_zadania{
+
+    width: 100%;
+    height: 5%;
+    top:0;
+    background-color: var(--grey);
+}
+.zadania1{
+    font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+.buton_contener{
+
+    display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+/*
+#zadania{
+
+    font-size: 7.1vh;
+    text-align: center;
+    width: 300px;
+    height: 90px;
+    background: var(--white);
+    border-top: solid red;
+    border-bottom: solid red;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+*/
+/*
+scp Back-borys.png borys_scaled.png borys_scaled_reverse.png PIX-BORYS.png wolf.png student04@212.182.61.57:/var/www/student04/symfony/public/img/
+
+cd Plik
+Jako administrator
+
+*/
