@@ -15,8 +15,6 @@ function realtimeClock(){
         var t =setTimeout(realtimeClock,500);
 
 }
-
-console.log("Javascipt is here!");
 let c = document.getElementById("can");
 let ctx = c.getContext("2d");
 
@@ -54,7 +52,7 @@ let animate = () =>{
     ctx.clearRect(0, 0, maxWidth, maxHeight);
     requestAnimationFrame(animate);
     borys_move();
-    console.log(`borysX: ${borys_x}\t\t borysY: ${borys_y}`);
+    // console.log(`borysX: ${borys_x}\t\t borysY: ${borys_y}`);
 }
 animate();
 
