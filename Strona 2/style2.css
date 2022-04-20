@@ -18,25 +18,39 @@ body{
     overflow-y: hidden;
 }
 /*Karta*/
-
-.karta{
-
+.card{
     width: 15%;
     height: 55%;
-    background-color: green;
+
     display: flex;
+    justify-content: center;
+    align-items: center;
 
+    background-size: cover;
+    background-position: center;
 
+    animation: wejscie 4s;
+
+    border-radius: 0px 50px 0px 50px;
+}
+#karta{
+
+    /* width: 15%;
+    height: 55%; */
+    background-color: green;
+    /* display: flex; */
+
+/* 
     justify-content: center;
     align-items: center;
     
     background-size: cover;
-    background-position: center;
+    background-position: center; */
     background-image: url("natura.png");
 
-    animation: obrot 4.5s;
+    /* animation: wejscie 4.5s forwards; */
     
-    border-radius: 0px 50px 0px 50px;
+    /* border-radius: 0px 50px 0px 50px; */
     
 }
 .szklo{
@@ -51,41 +65,41 @@ body{
     justify-content: center;
 
 }
-.karta:hover .orange{
+/* #karta:hover .orange{
 
     transform: translateY(-100%);
 
     animation: wjazd 4s;
 
 
-}
+} */
 
-.karta2{
+#karta2{
 
-    width: 15%;
-    height: 55%;
+    /* width: 15%;
+    height: 55%; */
     background-color: orange;
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
     
     background-size: cover;
   
-    background-position: center;
+    background-position: center; */
   
     background-image: url("miasto.jpg");
 
-    animation: obrot 4.3s;
+    /* animation: wejscie 4.3s; */
 
-    border-radius: 0px 50px 0px 50px;
+    /* border-radius: 0px 50px 0px 50px; */
     
 }
-.karta3{
+#karta3{
 
-    width: 15%;
-    height: 55%;
+    /* width: 15%;
+    height: 55%; */
     background-color: blue;
-    display: flex;
+    /* display: flex;
 
     justify-content: center;
     align-items: center;
@@ -93,16 +107,16 @@ body{
     background-size: cover;
    
     background-position: center;
-  
+   */
     background-image: url("inf.jpg");
 
-    animation: obrot 4s;
+    /* animation: wejscie 4s; */
     
-    border-radius: 0px 50px 0px 50px;
+    /* border-radius: 0px 50px 0px 50px; */
 
 }
 
-.karta:hover{
+#karta:hover{
     
     box-shadow:  10px 10px 10px 0.5px yellow;
   
@@ -110,20 +124,20 @@ body{
 
     transition: 0.3s transform ease-in-out;
 }
-.karta2:hover{
+#karta2:hover{
     
    
 
-    box-shadow:  10px 10px 10px 0.5px yellow;
+    box-shadow:  10px 10px 10px 0.5px blue;
   
     transform: scale(1.1);
 
     transition: 0.3s transform ease-in-out;
 
 }
-.karta3:hover{
+#karta3:hover{
     
-    box-shadow:  10px 10px 10px 0.5px yellow;
+    box-shadow:  10px 10px 10px 0.5px red;
   
     transform: scale(1.1);
 
@@ -134,7 +148,6 @@ body{
 
 
 .wysmenu{
-
  
     width: 100%;
     height: 100%;
@@ -143,25 +156,51 @@ body{
     align-items: center;
 
 }
-.orange{
-    background-color: orange;
+.curtain{
+    position:absolute;
+    left:0;
+    top:100%;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     transform: translateY(0%);
-   
 }
-
-@keyframes obrot{
+#orange{
+    background-color: orange;
+}
+#blue{
+    background-color: blue;
+}
+#red{
+    background-color: red;
+    
+}
+.jump-in{
+    animation: wjazd 2s;
+    animation-fill-mode: forwards;
+}
+.jump-out{
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: wyjazd 2s forwards;
+}
+.go-in{
+    animation: wejscie 2s forwards;
+}
+.go-out{
+    animation: wyjscie 3s forwards;
+}
+@keyframes wejscie{
 
         0% {
 
             transform: translateX(-700%);
 
         }
-        15%{
+        /* 15%{
            
             transform: rotate(-45deg);
         }
@@ -175,13 +214,26 @@ body{
 
             transform: rotate(0deg);
 
-        }
+        } */
 
         100% {
             
             transform: translateX(0%);
 
         }
+}
+@keyframes wyjscie{
+
+    0% {
+        transform: translateY(0%);
+        
+
+    }
+    100% {
+        
+        transform: translateY(700%);
+
+    }
 }
 
 @keyframes wjazd {
@@ -216,4 +268,9 @@ body{
 
 
 
+}
+.arrow{
+    box-shadow: 0 0 1px 1px red;
+    margin:auto;
+    margin-bottom: 0;
 }

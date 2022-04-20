@@ -4,7 +4,7 @@
     <head>
         <title>Strona Glowna</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Borys.">
+        <meta name="description" content="Borys">
         <link rel="stylesheet" href="style2.css">
         <meta charset="utf-8">
     </head>
@@ -14,7 +14,7 @@
 
         <div class="wysmenu">
             
-        <div class="karta">
+        <div id="karta" class="card">
             <button class="szklo">
                     KLIKNIJ
             </button>
@@ -23,15 +23,14 @@
 
         </div>
 
-        <div class="karta2">
+        <div id="karta2" class="card">
             <div class="szklo">
 
             </div>
         </div>
 
-        <div class="karta3">
+        <div id="karta3" class="card">
             <div class="szklo">
-
             </div>
         </div>
 
@@ -39,18 +38,26 @@
         </div>
 
 
-        <div class="orange">
-
+        <div id="orange" class="curtain">
+            <img src="Arrow-down.png" width="100" height="60" class="arrow">
         </div>
         
 
-        <div class="blue">
+        <div id="blue" class="curtain">
+            <img src="Arrow-down.png" width="100" height="60" class="arrow">
+        </div>
 
-
+        <div id="red" class="curtain">
+            <!-- Roller -->
+            <video width="1000" height="800" autoplay loop muted controls>
+                <source src="videoplayback.mp4" type="video/mp4">
+            </video>
+            <!-- End of Roller -->
+            <img src="Arrow-down.png" width="100" height="60" class="arrow">
         </div>
 
 
-        
+        <script src="script.js"></script>
     </body>
 
 
