@@ -6,3 +6,6 @@ Główna - http://student04.ai2022.pl/
 
 # Strona 2
 "Karty"
+
+# Strona 3
+Karuzela
