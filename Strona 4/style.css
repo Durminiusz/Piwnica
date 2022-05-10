@@ -1,0 +1,203 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+}
+.block_1{
+
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: black;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* transform: translateY(-500%);   */
+    
+    color: white;
+}
+
+.block_1 h1{
+
+
+    font-size: 15vh;
+
+
+}
+.block_1 button{
+
+
+    position: absolute;
+
+    width: 15vw;
+    height: 5vh;
+    font-size: 3vh;  
+
+    border: solid red 3px;
+    background: none;
+    top:65%;
+
+    
+
+    color: white;
+
+    
+}
+.block{
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: black;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+
+    color: white;
+    /* To poniżej usunąć */
+    position: absolute; 
+    /* transform: translateY(-500%);   */
+    
+}
+#nav{
+
+    width: 8%;
+    height: 100%;
+
+    border-right: solid red 3px;
+
+    background-color: black;
+
+}
+#nav button{
+
+
+    width: 100%;
+    height: 10%;
+    border: solid red 2px;
+    background: none;
+    color: white;
+
+    font-size: 2vh;
+
+}
+#slajd{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color:white;
+
+}
+#slajd h1{
+
+    font-size: 10vh;
+
+}
+#slajd h2{
+
+
+    font-size: 11vh;
+    color: gold;
+
+}
+#slajd p{
+
+   font-size: 11vh;
+   color: gold;
+
+
+}
+#slajd medium{
+
+    font-size: 10vh;
+    color: white;
+}
+.karta{
+
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+     transform: translateY(-500%);  
+
+     /* animation: wyjscie 1.5s; */
+
+}
+.karta button{
+
+    position: absolute;
+
+    width: 5%;
+    height: 10%;
+
+    background: gold;
+
+    color: black;
+
+    border:none;
+ 
+    top:0%;
+    left:0%;
+}
+
+@keyframes wejscie{
+
+    0%{
+
+        transform: translateY(100%);
+    }
+    100%{
+
+        transform: translateY(0%);
+
+    }
+
+}
+@keyframes wyjscie{
+
+    0%{
+
+        transform: translateY(0%);
+    }
+    100%{
+
+        transform: translateY(100%);
+    }
+
+
+}
+.jump-out{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: wyjscie 2s forwards;
+
+}
+.jump-in{
+    animation: wejscie 2s;
+    animation-fill-mode: forwards;
+}
