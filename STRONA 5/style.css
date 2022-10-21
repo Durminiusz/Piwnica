@@ -1,0 +1,257 @@
+*{
+
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    
+     overflow-x: hidden;
+     overflow-y: hidden;
+    
+}
+
+/*Strona wejsciowa*/
+.enter{
+
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    font-size: 20vh;
+
+    
+}
+
+.enter button{
+
+    width: 15%;
+    height: 10%;
+    border: solid #394ba5 4px;
+    background-color: black;
+    color: white;
+    font-size: 6vh;
+    
+    box-shadow:  0 0 100px 15px #394ba5;
+
+
+}
+
+/*Animacje Strona Wejsciowa*/
+.wyjscie{
+
+    animation: wyjscie 2s forwards;
+
+}
+
+@keyframes wyjscie{
+
+    0%{
+
+        transform: translateY(0%);
+    }
+    100%{
+
+        transform: translateY(-100%);
+    }
+
+}
+/*Główne ciało strony*/
+.main{
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+/*Ruchome menu na stronie głównej (prawa i lewa strona)*/
+
+.main #lewe{
+
+    width: 15vw;
+    height: 100vh;
+
+    border-right: solid #394ba5 5px;
+
+    background-color: black;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.box{
+
+    list-style: none;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    animation: scroll 40s linear infinite;
+
+}
+.main #prawe{
+
+    width: 15vw;
+    height: 100vh;
+
+    border-left: solid #394ba5 5px;
+
+    background-color: black;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+}
+
+.box li{
+
+    width: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border: solid white 5px; 
+    font-size: 100vh;
+    color: white;
+
+    white-space: nowrap;
+
+}
+
+
+@keyframes scroll{
+
+    0%{transform:  translateY(0vh);}
+    100%{transform: translateY(-1170vh);}
+
+}
+
+
+/*Główne menu z wyborem przycisków*/
+.main #srodek{
+
+    width: 70vw;
+    height:100vh;
+
+    background-color: black;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+.main #srodek #bbox{
+
+    width:50vw;
+    height: 100vh;
+    background-color: black;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+
+}
+
+.main #srodek button{
+
+    width: 25%;
+    height: 15%;
+
+    border: solid #394ba5 3px;
+
+    background-color: black;
+    color: white;
+    font-size: 5vh;
+
+}
+.main #srodek button:hover{
+    box-shadow: 0 0 15px 5px white;
+}
+
+/*Slajdy*/
+.mainslajd{
+
+  
+    width: 100vw;
+    height: 100vh;
+
+    background-color: black;
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+}
+.mainslajd button{
+
+   /* position: absolute;*/
+    width: 15%;
+    height: 10%;
+
+    border: solid #394ba5 3px;
+
+    background-color: black;
+    color: white;
+    font-size: 7vh;
+
+}
+.mainslajd #textbox{
+
+    color: white;
+    font-size: 5vh;
+
+}
+
+.wyjazd{
+
+    animation: wyjazd 2s forwards;
+
+}
+
+@keyframes wyjazd{
+
+    0%{
+
+        transform: translateY(-200vh);
+    }
+    100%{
+
+        transform: translateY(0vh);
+    }
+
+}
+.wjazd{
+
+    animation: wjazd 2s forwards;
+
+
+}
+@keyframes wjazd{
+
+    0%{
+
+        transform: translateY(0vh);
+    }
+    100%{
+
+        transform: translateY(-200vh);
+    }
+
+}
